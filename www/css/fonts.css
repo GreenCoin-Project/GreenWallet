@@ -31,14 +31,7 @@
   font-weight: 200;
   src: url(../fonts/exo.woff) format('woff');
 }
-
-@font-face {
-  font-family: 'dev';
-  font-style: normal;
-  font-weight: 200;
-  src:	url(../fonts/dev.woff) format('woff'),
-		url(../fonts/dev.ttf) format('truetype');
-}
+		
 
 .exo {
 	font-family: exo, sans-serif;

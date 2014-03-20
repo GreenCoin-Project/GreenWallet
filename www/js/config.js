@@ -88,7 +88,7 @@ config = new function(){
 						id: 'step-profile',
 						icon: 'bc-profile'
 					},
-					title: base.lang('Brain<span>Control</span>')
+					title: base.lang('Green<span>Coin</span>')
 				},
 				nav: [
 					{ href: '#', classes: 'bc-slide active', id: 'page-markets', icon: 'bc-markets', text: 'Markets' },

@@ -71,6 +71,12 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
         console.log('Received Event: ' + id);
     },
+		braincontrol: function(){
+				$(window).load(function(e)
+				{
+					braincontrol.init();
+				});
+		},
 
 		index: function(){
 				var  myURL = domain + "/pages/home/json";

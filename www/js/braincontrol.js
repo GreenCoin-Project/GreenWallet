@@ -357,6 +357,7 @@ braincontrol = new function(options){
 
 		braincontrol.template('base', false, function(html)
 		{
+		
 			$('#'+options.id).html(html);
 			$('#'+options.id).prepend('<h1 id="loading-text">'+options.ux.buttons.loading+'</h1>');
 			if(base.really_compatible() === false)
@@ -447,9 +448,11 @@ braincontrol = new function(options){
 	this.init = function()
 	{
 		var settings = braincontrol.start(config.defaults());
+		
 		var wrapper = $('#'+settings.id);
 		if($(wrapper).length > 0)
 		{
+		
 			braincontrol.setup(settings);
 		}
 		else
@@ -458,6 +461,7 @@ braincontrol = new function(options){
 		}
 	}
 }
+
 
 $(window).load(function(e)
 {
