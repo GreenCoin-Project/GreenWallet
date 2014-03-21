@@ -10,14 +10,14 @@ config = new function(){
 	{
 		var defaults = {
 			id: 'braincontrol',
-			name: 'BrainControl',
-			salt: 'braincontrolmesalt',
+			name: 'MindWallet',
+			salt: 'GreenCoin-MindWallet',
 			stats: [
-				{id: 'dashboard-usd', fact: base.lang('BTC to USD'), figure: base.lang('loading')},
+				{id: 'dashboard-usd', fact: base.lang('XGC to USD'), figure: base.lang('loading')},
 				{id: 'dashboard-24tx', fact: base.lang('Daily Transactions'), figure: base.lang('loading')},
-				{id: 'dashboard-24sent', fact:base.lang('Daily BTC Sent'), figure: base.lang('loading')},
+				{id: 'dashboard-24sent', fact:base.lang('Daily XGC Sent'), figure: base.lang('loading')},
 				{id: 'dashboard-hash', fact:base.lang('Hash Rate GH/s'), figure: base.lang('loading')},
-				{id: 'dashboard-found', fact:base.lang('BTC Discovered'), figure: base.lang('loading')},
+				{id: 'dashboard-found', fact:base.lang('XGC Discovered'), figure: base.lang('loading')},
 				{id: 'dashboard-cap', fact:base.lang('Market Cap USD'), figure: base.lang('loading')}
 			],
 			ux: {
@@ -26,8 +26,8 @@ config = new function(){
 					intro: base.lang('For those that are extra paranoid, use a 6 digit PIN number for extra security.')
 				},
 				calculator: {
-					title: base.lang('BTC<span>Calculator</span>'),
-					placeholder: base.lang('Convert from USD to BTC')
+					title: base.lang('XGC<span>Calculator</span>'),
+					placeholder: base.lang('Convert from USD to XGC')
 				},
 				qr: {
 					title: base.lang('QR<span>Code</span>'),
@@ -47,7 +47,7 @@ config = new function(){
 					notes: base.lang('Notes'),
 					scan: base.lang('Scan OR Import QR Code - Beta'),
 					qr: base.lang('QR'),
-					new_in: base.lang('Generate New Wallet'),
+					new_in: base.lang('Generate New MindWallet GreenCoin'),
 					new_contact: base.lang('Add New Contact'),
 					reset: base.lang('Reset Device'),
 					import_keys: base.lang('Import Keys'),
@@ -60,13 +60,13 @@ config = new function(){
 			forms: {
 				send: [
 					{paragraph: [
-						{ text: base.lang('Send Bitcoin from one of your wallets to any known address using the following form'), classes:'unessential' },
+						{ text: base.lang('Send GreenCoin from one of your wallets to any known address using the following form'), classes:'unessential' },
 					]},
 					{id: 'type', value: 'send_payment'},
-					{id: 'to', label: base.lang('To'), type:'text', placeholder: base.lang('BTC Address'), icon: [{href: '#', id: 'bc-select-contact', img: 'user'}]},
+					{id: 'to', label: base.lang('To'), type:'text', placeholder: base.lang('XGC Address'), icon: [{href: '#', id: 'bc-select-contact', img: 'user'}]},
 					{id: 'from', label: base.lang('From'), select:{options:[]}},
 					{id: 'fee', label: base.lang('Fee'), type:'text', placeholder: base.lang('0.0001 Min'), value: 0.0001},
-					{id: 'amount', label: base.lang('Amount'), type:'text', placeholder: base.lang('BTC to Send')},
+					{id: 'amount', label: base.lang('Amount'), type:'text', placeholder: base.lang('XGC to Send')},
 					{id: 'submit', value: base.lang('Send'), type:'submit', classes:'bc-block bc-button bc-primary bc-submit'},
 					{id: 'password'},
 					{id: 'salt'},
@@ -88,7 +88,7 @@ config = new function(){
 						id: 'step-profile',
 						icon: 'bc-profile'
 					},
-					title: base.lang('Brain<span>Control</span>')
+					title: base.lang('MindWallet <span>GreenCoin</span>')
 				},
 				nav: [
 					{ href: '#', classes: 'bc-slide active', id: 'page-markets', icon: 'bc-markets', text: 'Markets' },
@@ -132,7 +132,7 @@ config = new function(){
 				warning: base.lang('This device is compatible')
 			},
 			bottom: {
-				text: base.lang('It only takes a minute to setup your Bitcoin wallet. No need to download additional software or have a Bitcoin node installed.')
+				text: base.lang('It only takes a minute to setup your GreenCoin wallet. No need to download additional software or have a GreenCoin node installed.')
 			}
 		};
 		options.panels.push(bc_starting_point);
@@ -147,7 +147,7 @@ config = new function(){
 					{ text: base.lang('Since this is the first time you have visited this application using this browser (or have somehow re-set your LocalStorage) - you will first need to configure the application.') },
 					{ text: base.lang('The application uses a combination of salts, label names and passwords to generate inline deterministc key-pairs.') },
 					{ text: base.lang('The private keys are NOT stored on ANY device so re-entering the passwords is frequently required and important.') },
-					{ text: base.lang('The application uses BlockChain.info to ascertain market values, account balanaces and relaying the raw transactions.'), classes: 'unessential' }
+					{ text: base.lang('The application uses <strong><a href="http://blockchain.greencoin.io">BlockChain.GreenCoin.io</a></strong> to ascertain market values, account balanaces and relaying the raw transactions.'), classes: 'unessential' }
 				]
 			},
 			bottom: {
@@ -167,9 +167,9 @@ config = new function(){
 				form: [
 					{ id: 'type', value: 'new_id' },
 					{ id: 'salt', type: 'text', label: base.lang('Device Salt'), value: salt, placeholder: base.lang('A memorable salt is required!'), icon: 'info-circle', icons: [{icon:'info-circle'}] },
-					{ id: 'name', type: 'text', label: base.lang('Account Name') },
-					{ id: 'password', type: 'password', label: base.lang('Passphrase') },
-					{ id: 'password_repeat', type: 'password', label: base.lang('Repeat') },
+					{ id: 'name', type: 'text', placeholder: base.lang('Your Account Name'), label: base.lang('Account Name') },
+					{ id: 'password', type: 'password', label: base.lang('Passphrase'),placeholder: base.lang('Suggested 16 characters') },
+					{ id: 'password_repeat', type: 'password', label: base.lang('Repeat'), placeholder: base.lang('Same as above') },
 					{ id: 'pin', classes: 'pin_number' },
 				]
 			},
@@ -183,16 +183,16 @@ config = new function(){
 		options.panels.push({
 			id: 'step-new',
 			top: {
-				text: base.lang('New<span>Wallet</span>'),
+				text: base.lang('New MindWallet <span>GreenCoin</span>'),
 				close: true
 			},
 			middle: {
 				text: base.lang('If you forget your passwords and names, or change then loose salts; you will not be able to access wallets that are not backed-up.'),
 				form: [
 					{ id: 'type', value: 'new_id' },
-					{ id: 'name', type: 'text', label: base.lang('Account Name') },
-					{ id: 'password', type: 'password', label: base.lang('Passphrase') },
-					{ id: 'password_repeat', type: 'password', label: base.lang('Repeat') },
+					{ id: 'name', type: 'text', label: base.lang('Account Name'),placeholder: base.lang('Your Account Name') },
+					{ id: 'password', type: 'password', label: base.lang('Passphrase'),placeholder: base.lang('Suggested 16 characters') },
+					{ id: 'password_repeat', type: 'password', label: base.lang('Repeat'), placeholder: base.lang('Same as above')},
 					{ id: 'salt', type: 'text', label: base.lang('Extra Salt'), value: salt, placeholder: base.lang('A memorable salt is required!'), icon: 'info-circle', icons: [{icon:'info-circle'}]  },
 					{ id: 'pin', classes: 'pin_number' },
 				]
@@ -215,8 +215,8 @@ config = new function(){
 				form: [
 					{ id: 'type', value: 'recover_accounts' },
 					{ id: 'name', type: 'text', label: base.lang('Account Name') },
-					{ id: 'password', type: 'password', label: base.lang('Passphrase') },
-					{ id: 'password_repeat', type: 'password', label: base.lang('Repeat') },
+					{ id: 'password', type: 'password', label: base.lang('Passphrase'),placeholder: base.lang('Suggested 16 characters') },
+					{ id: 'password_repeat', type: 'password', label: base.lang('Repeat'), placeholder: base.lang('Same as above') },
 					{ id: 'salt', type: 'text', label: base.lang('Salt Used'), placeholder: base.lang('The original salt'), icon: 'info-circle', icons: [{icon:'info-circle'}]  },
 					{ id: 'url', type: 'text', label: base.lang('URL Used'), placeholder: base.lang('Original URL?') },
 					{ id: 'pin', classes: 'pin_number' },
@@ -240,8 +240,8 @@ config = new function(){
 					{ id: 'type', value: 'import_keys' },
 					{ id: 'key', type: 'text', label: base.lang('Private Key') },
 					{ id: 'name', type: 'text', label: base.lang('Account Name') },
-					{ id: 'password', type: 'password', label: base.lang('Passphrase') },
-					{ id: 'password_repeat', type: 'password', label: base.lang('Repeat') },
+					{ id: 'password', type: 'password', label: base.lang('Passphrase'),placeholder: base.lang('Suggested 16 characters') },
+					{ id: 'password_repeat', type: 'password', label: base.lang('Repeat'), placeholder: base.lang('Same as above') },
 					{ id: 'salt', type: 'text', label: base.lang('Desired Salt'), classes: 'unessential', value: salt, icon: 'info-circle', icons: [{icon:'info-circle'}]  },
 					{ id: 'pin', classes: 'pin_number' },
 				],
@@ -267,7 +267,7 @@ config = new function(){
 				form: [
 					{ id: 'type', value: 'new_contact' },
 					{ id: 'name', type: 'text', label: base.lang('Contact Name') },
-					{ id: 'address', type: 'text', label: base.lang('BTC Address') },
+					{ id: 'address', type: 'text', label: base.lang('XGC Address') },
 					{ id: 'tel' },
 					{ id: 'email' },
 					{ id: 'notes' }
@@ -324,7 +324,7 @@ config = new function(){
 				form: [
 					{ id: 'type', value: 'confirm_details' },
 					{ id: 'username' },
-					{ id: 'password', type: 'password', label: base.lang('Passphrase') },
+					{ id: 'password', type: 'password', label: base.lang('Passphrase'),placeholder: base.lang('Suggested 16 characters') },
 					{ id: 'salt', type: 'text', label: base.lang('Extra Salt'), value: salt },
 					{ id: 'pin', classes: 'pin_number' },
 				]
@@ -345,10 +345,10 @@ config = new function(){
 			middle: {
 				form: [
 					{paragraph: [
-						{ text: base.lang('Sending <span class="btc">0</span> BTC (worth <span class="usd">0</span> USD) and paying a <span class="fee">0</span> USD Transaction Fee to the Network...?'), classes:'unessential' },
+						{ text: base.lang('Sending <span class="btc">0</span> XGC (worth <span class="usd">0</span> USD) and paying a <span class="fee">0</span> USD Transaction Fee to the Network...?'), classes:'unessential' },
 					]},
 					{ id: 'type', value: 'confirm_send' },
-					{ id: 'password', type: 'password', label: base.lang('Passphrase') },
+					{ id: 'password', type: 'password', label: base.lang('Passphrase'),placeholder: base.lang('Suggested 16 characters') },
 					{ id: 'salt', type: 'text', label: base.lang('Extra Salt'), value: salt },
 					{ id: 'pin', classes: 'pin_number' },
 					{ id: 'username' },

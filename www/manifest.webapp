@@ -1,16 +1,16 @@
 {
   "version" : "0.1",
-  "name": "BrainControl",
+  "name": "GreenWallet",
   "type": "privileged",
-  "description": "An HTML5 Bitcoin Wallet",
+  "description": "An HTML5 Greencoin Wallet",
   "launch_path": "/index.html",
   "icons": {
     "60": "/img/icon-60.png",
     "128": "/img/icon-128.png"
   },
   "developer": {
-    "name": "BrainControl",
-    "url": "http://braincontrol.me"
+    "name": "Greencoin",
+    "url": "http://greencoin.io"
   },
   "default_locale": "en",
   "fullscreen": "true"

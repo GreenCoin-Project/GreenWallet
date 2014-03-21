@@ -11,7 +11,7 @@ HEADERS
 	right: 0;
 	height: 40px;
 	overflow: hidden;
-	background: #FFFFCC;
+	background: #FFFFFF;
 	border-bottom: 2px solid #000;
 	z-index: 999999;
 	vertical-align: top;
@@ -23,7 +23,7 @@ HEADERS
 	left: 0;
 	right: 0;
 	height: 56px;
-	background: #FFFFCC;
+	background: #FFFFFF;
 	overflow: hidden;
 	border-top: 2px solid #000;
 	z-index: 999999;
@@ -45,7 +45,7 @@ HEADERS
 	margin: 0;
 }
 #braincontrol-holder #header h1 span {
-	color: #09C;
+	color: #006600;
 }
 #braincontrol #braincontrol-holder #header a.bc-slide {
 	display: block;
@@ -311,7 +311,7 @@ FORMS
 	opacity: 0;
 }
 #braincontrol ul.keypad li.enter a {
-	background-color: #EEE;
+	background-color: #333;
 }
 #braincontrol ul.keypad li a {
 	display: block;
@@ -319,7 +319,7 @@ FORMS
 	line-height: 50px;
 	font-size: 18px;
 	text-align: center;
-	background: #FFFF79;
+	background: #CAD9D7;
 	border: 1px solid #CCC;
 	border-radius: 6px;
 }
