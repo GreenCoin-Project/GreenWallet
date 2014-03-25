@@ -35,7 +35,7 @@ blockchain = new function(){
 				{
 					error_contacting_blockchain_info = true;
 					blockchain_info_timeout = setInterval(function(){blockchain_info_timeout_callback()},30000); // Every 30 Seconds
-					alert(base.lang('Error contacting BlockChain.info - Account Balances and Market Conditions are Currently Unavailable.'));
+					alert(base.lang('Error contacting BlockChain.GreenCoin.io - Account Balances and Market Conditions are Currently Unavailable.'));
 				}
 			}
 		})
