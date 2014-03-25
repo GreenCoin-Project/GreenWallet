@@ -260,7 +260,7 @@ braincontrol = new function(options){
 			{
 				stats = new Object();
 				stats.ts = now;
-				blockchain.query('24hrprice', false, 0, function(results)
+				blockchain.query('hr24price', false, 0, function(results)
 				{
 					count++;
 					var num = parseFloat(results).toFixed(2);
@@ -269,7 +269,7 @@ braincontrol = new function(options){
 					stats['price'] = figure;
 					if(count == 6) base.set('stats', stats);
 				});
-				blockchain.query('24hrtransactioncount', false, 0, function(results)
+				blockchain.query('hr24transactioncount', false, 0, function(results)
 				{
 					count++;
 					var figure = results.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -277,7 +277,7 @@ braincontrol = new function(options){
 					stats['transactions'] = figure;
 					if(count == 6) base.set('stats', stats);
 				});
-				blockchain.query('24hrbtcsent', false, 0, function(results)
+				blockchain.query('hr24btcsent', false, 0, function(results)
 				{
 					count++;
 					var satoshis = results / 100000000;

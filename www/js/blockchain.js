@@ -15,13 +15,14 @@ blockchain = new function(){
 
 	this.query = function(func, vars, confirmations, callback)
 	{
-		var url = 'https://blockchain.greencoin.io/q/'+func+'/'+vars;
+		var url = 'http://blockchain.greencoin.io/q/'+func+'/'+vars;
 		if(!vars || vars == 'false')
 		{
-			url = 'https://blockchain.greencoin.io/q/'+func;
+			url = 'http://blockchain.greencoin.io/q/'+func;
 		}
 		if(!confirmations) confirmations = 0;
 		if(confirmations) url+= '?confirmations='+confirmations;
+
 		$.ajax({
 			url: url,
 			success: function(results)
