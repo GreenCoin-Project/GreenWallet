@@ -15,10 +15,10 @@ blockchain = new function(){
 
 	this.query = function(func, vars, confirmations, callback)
 	{
-		var url = 'https://blockchain.info/q/'+func+'/'+vars;
+		var url = 'https://blockchain.greencoin.io/q/'+func+'/'+vars;
 		if(!vars || vars == 'false')
 		{
-			url = 'https://blockchain.info/q/'+func;
+			url = 'https://blockchain.greencoin.io/q/'+func;
 		}
 		if(!confirmations) confirmations = 0;
 		if(confirmations) url+= '?confirmations='+confirmations;
