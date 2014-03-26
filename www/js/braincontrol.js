@@ -263,7 +263,8 @@ braincontrol = new function(options){
 				blockchain.query('hr24price', false, 0, function(results)
 				{
 					count++;
-					var num = parseFloat(results).toFixed(2);
+					alert(results);
+					var num = parseFloat(results).toFixed(3);
 					var figure = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 					$('#braincontrol-holder #page-markets #dashboard-usd .figure').text(figure);
 					stats['price'] = figure;
@@ -277,10 +278,10 @@ braincontrol = new function(options){
 					stats['transactions'] = figure;
 					if(count == 6) base.set('stats', stats);
 				});
-				blockchain.query('hr24btcsent', false, 0, function(results)
+				blockchain.query('hr24xgcsent', false, 0, function(results)
 				{
 					count++;
-					var satoshis = results / 100000000;
+					var satoshis = results ;
 					var num = parseInt(satoshis);
 					var figure = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 					$('#braincontrol-holder #page-markets #dashboard-24sent .figure').text(figure);
@@ -290,7 +291,7 @@ braincontrol = new function(options){
 				blockchain.query('hashrate', false, 0, function(results)
 				{
 					count++;
-					var num = parseFloat(results * 1).toFixed(0);
+					var num = parseFloat(results * 1).toFixed(4);
 					var figure = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 					$('#braincontrol-holder #page-markets #dashboard-hash .figure').text(figure);
 					stats['hash'] = figure;
@@ -299,6 +300,7 @@ braincontrol = new function(options){
 				blockchain.query('totalbc', false, 0, function(results)
 				{
 					count++;
+					alert(results);
 					var satoshis = results / 100000000;
 					var num = parseInt(satoshis);
 					var figure = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");

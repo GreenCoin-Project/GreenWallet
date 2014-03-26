@@ -16,7 +16,7 @@ config = new function(){
 				{id: 'dashboard-usd', fact: base.lang('XGC to USD'), figure: base.lang('loading')},
 				{id: 'dashboard-24tx', fact: base.lang('Daily Transactions'), figure: base.lang('loading')},
 				{id: 'dashboard-24sent', fact:base.lang('Daily XGC Sent'), figure: base.lang('loading')},
-				{id: 'dashboard-hash', fact:base.lang('Hash Rate GH/s'), figure: base.lang('loading')},
+				{id: 'dashboard-hash', fact:base.lang('Difficulty'), figure: base.lang('loading')},
 				{id: 'dashboard-found', fact:base.lang('XGC Discovered'), figure: base.lang('loading')},
 				{id: 'dashboard-cap', fact:base.lang('Market Cap USD'), figure: base.lang('loading')}
 			],

@@ -22,7 +22,6 @@ blockchain = new function(){
 		}
 		if(!confirmations) confirmations = 0;
 		if(confirmations) url+= '?confirmations='+confirmations;
-
 		$.ajax({
 			url: url,
 			success: function(results)
@@ -69,7 +68,7 @@ blockchain = new function(){
 						if(results > original_balance)
 						{
 							var extra_btc = parseFloat((results - original_balance) / 100000000);
-							base.alert(base.lang('Incoming Payment of '+extra_btc+' BTC Received'));
+							base.alert(base.lang('Incoming Payment of '+extra_btc+' XGC Received'));
 						}
 					});
 				}
