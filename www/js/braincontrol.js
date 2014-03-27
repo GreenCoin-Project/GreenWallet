@@ -263,7 +263,6 @@ braincontrol = new function(options){
 				blockchain.query('hr24price', false, 0, function(results)
 				{
 					count++;
-					alert(results);
 					var num = parseFloat(results).toFixed(3);
 					var figure = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 					$('#braincontrol-holder #page-markets #dashboard-usd .figure').text(figure);
@@ -300,7 +299,6 @@ braincontrol = new function(options){
 				blockchain.query('totalbc', false, 0, function(results)
 				{
 					count++;
-					alert(results);
 					var satoshis = results / 100000000;
 					var num = parseInt(satoshis);
 					var figure = num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
